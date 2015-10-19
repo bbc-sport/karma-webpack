@@ -174,6 +174,7 @@ function createPreprocesor(/* config.basePath */basePath, webpackPlugin) {
 
 		// read blocks until bundle is done
 		webpackPlugin.readFile(path.relative(basePath, file.path), function(err, content) {
+			console.log('Content for ', file.path, content);
 			if (err) {
 				throw err;
 			}
